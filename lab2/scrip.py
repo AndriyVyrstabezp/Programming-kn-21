@@ -3,8 +3,10 @@ while True:
 
     if msg == "добрий день":
         print("Добрий день")
-    elif msg == "слава україні":
+    elif msg == "Слава Україні":
         print("Героям слава")
+    elif msg == "Слава ЗСУ":
+        print("СЛАВА!СЛАВА!СЛАВА!")
     elif msg == "pa pa":
         print("the end")
         break
