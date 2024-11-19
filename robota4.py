@@ -1,26 +1,24 @@
-def сортування_вибором(список, напрямок="зростання"):
-
-    n = len(список)
+def selection_sort(array, order="ascending"):
+    n = len(array)
     for i in range(n):
-
-        індекс = i
+        index = i
         for j in range(i + 1, n):
-            if (напрямок == "зростання" and список[j] < список[індекс]) or \
-                    (напрямок == "спадання" and список[j] > список[індекс]):
-                індекс = j
+            if (order == "ascending" and array[j] < array[index]) or \
+                    (order == "descending" and array[j] > array[index]):
+                index = j
 
-        список[i], список[індекс] = список[індекс], список[i]
-    return список
-
+        array[i], array[index] = array[index], array[i]
+    return array
 
 
 список_1 = [64, 34, 25, 12, 22, 11, 90]
 список_2 = [5, 8, 1, 3, 7, 9, 2]
 
 print("Сортування за зростанням:")
-print(сортування_вибором(список_1, "зростання"))
-print(сортування_вибором(список_2, "зростання"))
+print(selection_sort(список_1, "ascending"))
+print(selection_sort(список_2, "ascending"))
 
 print("\nСортування за спаданням:")
-print(сортування_вибором(список_1, "спадання"))
-print(сортування_вибором(список_2, "спадання"))
+print(selection_sort(список_1, "descending"))
+print(selection_sort(список_2, "descending"))
+
